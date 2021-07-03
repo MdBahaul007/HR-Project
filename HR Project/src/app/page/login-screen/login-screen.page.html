@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="--ion-color-primary1">
+    <ion-title></ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="login" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+
+
+</ion-header>
+
+<ion-content >
+  <ion-card class="ion-no-margin">
+    <div class="center">
+    <ion-img src="assets/images/logo1.jpg" class="ion-align-self-end" style="width: 150px; height: 150px;"></ion-img>
+    </div>
+    <div class="ion-text-center text">
+    <h3>Login</h3>
+    </div>
+
+    <ion-card-content>
+
+      <div class="wraperForm">
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <!-- <ion-label>Email</ion-label> -->
+          <ion-input type="text" name="email" placeholder="Enter Email" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <!-- <ion-label>Email</ion-label> -->
+          <ion-input type="password" name="password" placeholder="Enter Password"  required></ion-input>
+        </ion-item>
+      </div>
+
+      <div class="password-forget">
+        <ion-button fill="clear" class="ion-no-padding" routerLink="/forgot-password">Forgot Password</ion-button>
+
+      </div>
+
+      <div class="signUp-btn-wrap">
+        <ion-button shape="round" fill="solid" class="sign-btn" routerLink = "/home">Login</ion-button>
+      </div>
+
+      <div class="socialMedia-btns">
+        <ion-button  class="loginBtn ion-no-padding" fill="clear">
+            <ion-img src="assets/images/google.png"></ion-img>
+        </ion-button>
+
+        <ion-button class="ion-no-padding" fill="clear">
+          <ion-img src="assets/images/facebook.png"></ion-img>
+        </ion-button>
+
+        <ion-button class="ion-no-padding" fill="clear">
+          <ion-img src="assets/images/apple.png"></ion-img>
+        </ion-button>
+      </div>
+
+
+
+
+
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="ion-card-footer">
+    <span>Don't have an account?</span><button class="ion-no-padding" routerLink="/signup">Sign Up</button>
+  </div>
+
+
+</ion-content>

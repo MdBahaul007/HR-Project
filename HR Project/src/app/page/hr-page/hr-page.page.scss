@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+ion-content.background{
+  --background: url(../../../assets/images/Capture.PNG) ;
+
+}
+
+ion-card.add-interviwer{
+  --background: url(../../../assets/images/add-interviewer.PNG)center center/cover;
+  width: 200px;
+  height: 190px;
+  border-radius: 30px;
+  margin-left: 10px;
+  margin-top: 90px;
+}
+
+ion-card.add-candidates{
+  --background: url(../../../assets/images/add-candidates.PNG
+  )center center/cover;
+  width: 200px;
+  height: 190px;
+
+
+  margin-left: 140px;
+
+
+  border-radius:30px;
+
+}

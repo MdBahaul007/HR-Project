@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
+ion-content.background{
+  --background: url(../../../assets/images/Capture.PNG) ;
+
+}
+
+.home{
+  margin-bottom: 25px;
+  font-family: 'Yellowtail', cursive;
+  letter-spacing:1px;
+  font-size: 39px;
+}
+
+ion-card.hr-logo{
+  --background: url(../../../assets/images/11.png)center center/cover;
+  width: 130px;
+  height: 190px;
+  margin: 0 auto;
+
+  border-radius:30px;
+
+
+
+}
+
+ion-card.hr-interview{
+  --background: url(../../../assets/images/interview-logo.png)center center/cover;
+  width: 170px;
+  height: 190px;
+  border-radius: 30px;
+  margin-left: -20px;
+}
+ion-card.candidate-logo{
+  --background: url(../../../assets/images/candidate-logo.PNG)center center/cover;
+  width: 130px;
+  height: 190px;
+  margin-top: -40px;
+  margin-left: 20px;
+
+
+  border-radius:30px;
+
+}
+
+ion-card.know-hr{
+  --background: url(../../../assets/images/know-hr.PNG)center center/cover;
+  width: 170px;
+  height: 190px;
+  border-radius: 30px;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+ion-card.about-us{
+  --background: url(../../../assets/images/about-us.PNG)center center/cover;
+  width: 320px;
+  height: 60px;
+  border-radius: 30px;
+  margin-top: -20px;
+
+}
+
+
+
+
