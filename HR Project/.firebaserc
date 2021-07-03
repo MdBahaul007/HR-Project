@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hr-project-af005": {
+      "hosting": {
+        "app": [
+          "hr-project-af005"
+        ]
+      }
+    }
+  }
+}

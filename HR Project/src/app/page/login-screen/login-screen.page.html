@@ -10,30 +10,53 @@
 
 </ion-header>
 
-<ion-content >
+<ion-content>
   <ion-card class="ion-no-margin">
     <div class="center">
-    <ion-img src="assets/images/logo1.jpg" class="ion-align-self-end" style="width: 150px; height: 150px;"></ion-img>
+      <ion-img src="assets/images/logo1.jpg" class="ion-align-self-end" style="width: 150px; height: 150px;"></ion-img>
     </div>
     <div class="ion-text-center text">
-    <h3>Login</h3>
+      <h3>Login</h3>
     </div>
 
     <ion-card-content>
 
       <div class="wraperForm">
-        <ion-item>
-          <ion-icon name="mail-outline"></ion-icon>
-          <!-- <ion-label>Email</ion-label> -->
-          <ion-input type="text" name="email" placeholder="Enter Email" required></ion-input>
-        </ion-item>
+        <form [formGroup]="credentialForm">
+          <ion-item>
+            <ion-icon name="mail-outline"></ion-icon>
+            <!-- <ion-label>Email</ion-label> -->
+            <ion-input type="text" name="email" placeholder="Enter Email" formControlName="email" autofocus="true"
+              clearInput="true">
 
-        <ion-item>
-          <ion-icon name="lock-closed-outline"></ion-icon>
-          <!-- <ion-label>Email</ion-label> -->
-          <ion-input type="password" name="password" placeholder="Enter Password"  required></ion-input>
-        </ion-item>
+            </ion-input>
+
+            <!-- To validate email format if user touches email input bar(email touch) or type dirty value i.e value other than email so(email dirty) or types wrong format email)  -->
+            <!-- This below email value is coming from  get email() fn created in login.page.ts file  -->
+          </ion-item>
+          <div *ngIf="(email.touched || email.dirty) && email.  errors" class="errors">
+            <span *ngIf="email.errors?.required">Email is required</span>
+            <span *ngIf="email.errors?.email">Email is invalid</span>
+
+          </div>
+
+          <ion-item>
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <!-- <ion-label>Email</ion-label> -->
+            <ion-input type="password" name="password" placeholder="Enter Password" formControlName="password"
+              autofocus="true" clearInput="true">
+            </ion-input>
+          </ion-item>
+          <div *ngIf="(password.touched || password.dirty) && email.errors" class="errors">
+            <span *ngIf="password.errors?.required">Password is required</span>
+            <span *ngIf="password.errors?.email">Pass is invalid</span>
+
+          </div>
+
+        </form>
+
       </div>
+
 
       <div class="password-forget">
         <ion-button fill="clear" class="ion-no-padding" routerLink="/forgot-password">Forgot Password</ion-button>
@@ -41,12 +64,12 @@
       </div>
 
       <div class="signUp-btn-wrap">
-        <ion-button shape="round" fill="solid" class="sign-btn" routerLink = "/home">Login</ion-button>
+        <ion-button (click)="signIn()" shape="round" fill="solid" class="sign-btn">Login</ion-button>
       </div>
 
       <div class="socialMedia-btns">
-        <ion-button  class="loginBtn ion-no-padding" fill="clear">
-            <ion-img src="assets/images/google.png"></ion-img>
+        <ion-button class="loginBtn ion-no-padding" fill="clear">
+          <ion-img src="assets/images/google.png"></ion-img>
         </ion-button>
 
         <ion-button class="ion-no-padding" fill="clear">
