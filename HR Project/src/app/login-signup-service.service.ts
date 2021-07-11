@@ -23,6 +23,28 @@ export class LoginSignupServiceService {
     });
   }
 
+  async signUp({email,password}){
+    //on general signUp we will create User  simply with email and pasword in Firebase.
+    const credentail = await this.fireAuth.createUserWithEmailAndPassword(email,password); //this is promise(asyn declared function is promise) so we will wait for result so using await
+
+    console.log('Result: ',credentail);
+    //to grab unique id of user created within firebase
+    const uId= credentail.user.uid;
+
+
+    //now to store user information in databse of firebase ie firestone
+
+    return this.firestone.doc(
+      `users/${uId}` //this will maintain uniqueness.
+    ).set({
+      uId,
+      email:credentail.user.email
+
+    }); //we can add more info here if we want
+
+
+  }
+
   signIn({email,password}){
     //for signIn we will use reactive form and signIn will take email and password.
     return this.fireAuth.signInWithEmailAndPassword(email,password);//here passing whole form value i.e email and password to our signIn function.

@@ -1,4 +1,4 @@
-<ion-header  >
+<ion-header>
   <ion-toolbar>
     <ion-title>HR-Portal</ion-title>
     <ion-buttons slot="start">
@@ -9,24 +9,47 @@
 
 
 </ion-header>
-<ion-content class= "background" no-scroll padding>
+<ion-content class="background" no-scroll padding>
 
-<ion-grid>
+  <ion-grid>
 
-  <ion-row>
-    <ion-col  >
+    <ion-row>
+      <ion-col>
 
-      <ion-card class="add-interviwer" routerLink = "add-interviewer" >
+        <ion-card class="add-interviwer" routerLink="add-interviewer">
 
-      </ion-card>
-    </ion-col>
-    <ion-col >
+        </ion-card>
+      </ion-col>
+      <ion-col>
 
-      <ion-card class="add-candidates" routerLink = "add-candidate" >
+        <ion-card class="add-candidates" routerLink="add-candidate">
 
-      </ion-card>
-    </ion-col>
+        </ion-card>
+      </ion-col>
 
-  </ion-row>
+
+
+
+
+    </ion-row>
+
+    <ion-row>
+
+
+      <ion-col>
+
+        <ion-card class="edit-interviewer-details" routerLink="edit-interviewer-details">
+
+        </ion-card>
+      </ion-col>
+
+      <ion-col>
+
+        <ion-card class="edit-candidate-details" routerLink="edit-candidate-details">
+
+        </ion-card>
+      </ion-col>
+
+    </ion-row>
   </ion-grid>
-  </ion-content>
+</ion-content>

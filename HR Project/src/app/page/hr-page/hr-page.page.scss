@@ -1,29 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
 
-ion-content.background{
-  --background: url(../../../assets/images/Capture.PNG) ;
-
+ion-content.background {
+  --background: url(../../../assets/images/Capture.PNG);
 }
 
-ion-card.add-interviwer{
-  --background: url(../../../assets/images/add-interviewer.PNG)center center/cover;
-  width: 200px;
+ion-card.add-interviwer {
+  --background: url(../../../assets/images/add-interviewer.PNG) center
+    center/cover;
+  width: 152px;
   height: 190px;
   border-radius: 30px;
-  margin-left: 10px;
+  margin-left: 5px;
   margin-top: 90px;
 }
 
-ion-card.add-candidates{
-  --background: url(../../../assets/images/add-candidates.PNG
-  )center center/cover;
-  width: 200px;
+ion-card.add-candidates {
+  --background: url(../../../assets/images/add-candidates.PNG) center
+    center/cover;
+  width: 140px;
   height: 190px;
+  margin-top: 90px;
 
+  border-radius: 30px;
+}
 
-  margin-left: 140px;
+ion-card.edit-interviewer-details {
+  --background: url(../../../assets/images/edit-interviewer-details.PNG) center
+    center/cover;
+  width: 152px;
+  height: 190px;
+  border-radius: 30px;
+  margin-left: 5px;
+  margin-top: 10px;
+}
 
+ion-card.edit-candidate-details {
+  --background: url(../../../assets/images/edit-candidates-details.PNG) center
+    center/cover;
+  width: 140px;
+  height: 190px;
+  margin-top: 10px;
 
-  border-radius:30px;
-
+  border-radius: 30px;
 }

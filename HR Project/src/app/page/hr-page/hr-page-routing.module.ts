@@ -15,6 +15,14 @@ const routes: Routes = [
   {
     path: 'add-interviewer',
     loadChildren: () => import('./add-interviewer/add-interviewer.module').then( m => m.AddInterviewerPageModule)
+  },
+  {
+    path: 'edit-interviewer-details',
+    loadChildren: () => import('./edit-interviewer-details/edit-interviewer-details.module').then( m => m.EditInterviewerDetailsPageModule)
+  },
+  {
+    path: 'edit-candidate-details',
+    loadChildren: () => import('./edit-candidate-details/edit-candidate-details.module').then( m => m.EditCandidateDetailsPageModule)
   }
 ];
 

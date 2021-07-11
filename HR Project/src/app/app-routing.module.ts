@@ -49,6 +49,7 @@ const routes: Routes = [
     loadChildren: () => import('./page/know-hr/know-hr.module').then( m => m.KnowHrPageModule)
   },
 
+
 ];
 
 @NgModule({
